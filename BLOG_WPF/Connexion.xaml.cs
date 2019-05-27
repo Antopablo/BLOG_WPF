@@ -42,9 +42,8 @@ namespace BLOG_WPF
                 }
                 ((MainWindow)System.Windows.Application.Current.MainWindow).Affichage_nomUser.Text = usr.Pseudo + " - " +usr.Right.ToString() ;
                 mw.Connected_user = usr;
+
                 mw.Bouton_Ajouter.IsEnabled = true;
-                mw.Bouton_Editer.IsEnabled = true;
-                mw.Bouton_Supprimer.IsEnabled = true;
                 this.Close();
             }
             catch (Exception)

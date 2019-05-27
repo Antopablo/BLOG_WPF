@@ -13,6 +13,7 @@
             <MenuItem Header="Espace Client" Height="50" Width="152">
                 <MenuItem x:Name="Bouton_Login" Header="Se Connecter"  Height="50" Width="178" Margin="0,0,-38.8,0" Click="Bouton_Login_Click"/>
                 <MenuItem x:Name="Bouton_SignOn" Header="S'inscrire"  Height="50" Width="171" Margin="0,0,-38.8,0" Click="Bouton_SignOn_Click"/>
+                <MenuItem x:Name="Bouton_SignOut" Header="Se déconnecter"  Height="50" Width="171" Margin="0,0,-38.8,0" Click="Bouton_SignOut_Click"/>
             </MenuItem>
             <MenuItem x:Name="Bouton_Ajouter" Header="Ajouter Article"  Height="50" Width="152" Click="Bouton_Ajouter_Click" IsEnabled="False"/>
             <MenuItem x:Name="Bouton_Editer" Header="Editer"  Height="50" Width="152" IsEnabled="False" Click="Bouton_Editer_Click"/>

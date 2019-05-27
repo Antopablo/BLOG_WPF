@@ -19,6 +19,10 @@ namespace BLOG_WPF
             Writer = writer;
         }
 
+        public Article()
+        {
+        }
+
         [Key]
         public int Id { get; set; }
 

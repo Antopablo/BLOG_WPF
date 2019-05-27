@@ -80,6 +80,62 @@ namespace BLOG_WPF
         {
             Result_title.Text = ((Article)ListeArticles.SelectedItem).Titre;
             Result_Content.Text = ((Article)ListeArticles.SelectedItem).Contenu;
+
+            //var query3 = from c in DB.User
+            //             where c.Id == Connected_user.Id || Connected_user.Right == Right.ADMIN
+            //             select c;
+
+            var query2 = from x in DB.Article
+                         where x.Writer.Id == Connected_user.Id || Connected_user.Right == Right.ADMIN
+                         select x;
+
+            //List<int> L = new List<int>();
+            //foreach (var item in query3)
+            //{
+            //    L.Add(item.Id);
+            //}
+
+            //if (L.Contains(Connected_user.Id))
+            //{
+            //    Bouton_Supprimer.IsEnabled = true;
+            //    Bouton_Editer.IsEnabled = true;
+            //} else
+            //{
+            //    Bouton_Supprimer.IsEnabled = false;
+            //    Bouton_Editer.IsEnabled = false;
+            //}
+
+            List<Article> L = new List<Article>();
+            foreach (var item in query2)
+            {
+                L.Add(item);
+            }
+            if (L.Count > 0)
+            {
+                if (Connected_user.Id == L[0].Writer.Id)
+                {
+                    Bouton_Supprimer.IsEnabled = true;
+                    Bouton_Editer.IsEnabled = true;
+                }
+                
+            }
+            else
+            {
+                Bouton_Supprimer.IsEnabled = false;
+                Bouton_Editer.IsEnabled = false;
+            }
+
+        }
+
+        private void Bouton_SignOut_Click(object sender, RoutedEventArgs e)
+        {
+            Connected_user.Right = Right.GUEST;
+            Bouton_Supprimer.IsEnabled = false;
+            Bouton_Editer.IsEnabled = false;
+            Bouton_Ajouter.IsEnabled = false;
+
+            Affichage_nomUser.Text = Connected_user.Right.ToString();
+
         }
     }
 }
