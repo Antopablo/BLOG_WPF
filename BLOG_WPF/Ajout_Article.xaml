@@ -11,9 +11,9 @@
 
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="52" Margin="50,10,0,0" VerticalAlignment="Top" Width="697"/>
 
-        <TextBox x:Name="Titre" HorizontalAlignment="Left" Height="52" Margin="50,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="697" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" />
-        <TextBox x:Name="Article_Content" HorizontalAlignment="Left" Height="244" Margin="50,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="697"/>
-        <Button x:Name="Valider_Article" Content="Valider" HorizontalAlignment="Left" Margin="50,327,0,0" VerticalAlignment="Top" Width="507" Height="50" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="Champ_Titre" HorizontalAlignment="Left" Height="52" Margin="50,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="697" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" />
+        <TextBox x:Name="Champ_Article_Content" HorizontalAlignment="Left" Height="244" Margin="50,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="697"/>
+        <Button x:Name="Valider_Article" Content="Valider" HorizontalAlignment="Left" Margin="50,327,0,0" VerticalAlignment="Top" Width="507" Height="50" RenderTransformOrigin="0.5,0.5" Click="Valider_Article_Click"/>
         <Button x:Name="RAZ" Content="RAZ" HorizontalAlignment="Left" Margin="595,327,0,0" VerticalAlignment="Top" Width="152" Height="50"/>
 
     </Grid>

@@ -86,6 +86,10 @@
     <Compile Include="Migrations\201905270809124_RAN.Designer.cs">
       <DependentUpon>201905270809124_RAN.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905270950422_Ajout-Art.cs" />
+    <Compile Include="Migrations\201905270950422_Ajout-Art.Designer.cs">
+      <DependentUpon>201905270950422_Ajout-Art.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="signin.xaml.cs">
       <DependentUpon>signin.xaml</DependentUpon>
@@ -141,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905270809124_RAN.resx">
       <DependentUpon>201905270809124_RAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905270950422_Ajout-Art.resx">
+      <DependentUpon>201905270950422_Ajout-Art.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

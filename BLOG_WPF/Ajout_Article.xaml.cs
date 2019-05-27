@@ -19,9 +19,20 @@ namespace BLOG_WPF
     /// </summary>
     public partial class Ajout_Article : Window
     {
-        public Ajout_Article()
+        public Ajout_Article(MainWindow w)
         {
             InitializeComponent();
+            mw = w;
+        }
+
+        private MainWindow mw;
+
+        private void Valider_Article_Click(object sender, RoutedEventArgs e)
+        {
+            Article art = new Article(Champ_Titre.Text, Champ_Article_Content.Text, mw.Connected_user );
+            mw.DB.Article.Add(art);
+            mw.DB.SaveChanges();
+            MessageBox.Show("ok " + mw.Connected_user.Pseudo);
         }
     }
 }

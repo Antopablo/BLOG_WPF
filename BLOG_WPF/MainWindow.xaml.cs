@@ -27,6 +27,14 @@ namespace BLOG_WPF
             set { _db = value; }
         }
 
+        private User _Connected_user;
+        public User Connected_user
+        {
+            get { return _Connected_user; }
+            set { _Connected_user = value; }
+        }
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -48,7 +56,7 @@ namespace BLOG_WPF
 
         private void Bouton_Ajouter_Click(object sender, RoutedEventArgs e)
         {
-            Ajout_Article ajoutArt = new Ajout_Article();
+            Ajout_Article ajoutArt = new Ajout_Article(this);
             ajoutArt.Show();
         }
     }

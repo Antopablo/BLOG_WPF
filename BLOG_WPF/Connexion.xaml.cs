@@ -37,8 +37,8 @@ namespace BLOG_WPF
 
                 User usr = query.FirstOrDefault();
                 usr.Right = Right.USER;
-
                 ((MainWindow)System.Windows.Application.Current.MainWindow).Affichage_nomUser.Text = usr.Pseudo + " - " +usr.Right.ToString() ;
+                mw.Connected_user = usr;
                 this.Close();
             }
             catch (Exception)

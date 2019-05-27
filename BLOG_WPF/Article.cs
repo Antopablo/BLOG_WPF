@@ -11,6 +11,13 @@ namespace BLOG_WPF
     [Table("ARTICLE")]
     public class Article
     {
+        public Article(string titre, string contenu, User writer)
+        {
+            Titre = titre;
+            Contenu = contenu;
+            Writer = writer;
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -20,8 +27,8 @@ namespace BLOG_WPF
         [Column("Contenu")]
         public string Contenu { get; set; }
 
-        [Column("Auteur_ID")]
-        public int AuteurID { get; set; }
+        /*[Column("Auteur_ID")]
+        public int AuteurID { get; set; }*/
 
         public User Writer { get; set; }
 
