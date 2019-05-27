@@ -30,11 +30,29 @@ namespace BLOG_WPF
 
         private void Validation_Inscription_Click(object sender, RoutedEventArgs e)
         {
+            bool pseudoDejaPris = false;
+
             User user = new User(Champ_pseudo.Text, Champ_password.Password);
-            mw.DB.User.Add(user);
-            mw.DB.SaveChanges();
-            MessageBox.Show("Vous vous êtes bien enregistré", "Bien enregistré", MessageBoxButton.OK, MessageBoxImage.Information);
-            this.Close();
+
+            foreach (User item in mw.DB.User)
+            {
+                if (Champ_pseudo.Text == item.Pseudo)
+                {
+                    pseudoDejaPris = true;
+                }
+            }
+
+            if (pseudoDejaPris)
+            {
+                mw.DB.User.Add(user);
+                mw.DB.SaveChanges();
+                MessageBox.Show("Vous vous êtes bien enregistré", "Bien enregistré", MessageBoxButton.OK, MessageBoxImage.Information);
+                this.Close();
+            } else
+            {
+                MessageBox.Show("Pseudo déjà pris");
+            }
+            
         }
     }
 }
