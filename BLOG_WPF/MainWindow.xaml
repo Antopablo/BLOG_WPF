@@ -13,8 +13,8 @@
                 <MenuItem Name="Bouton_SignOn" Header="S'inscrire"  Height="50" Width="171" Margin="0,0,-38.8,0" Click="Bouton_SignOn_Click"/>
             </MenuItem>
             <MenuItem Name="Bouton_Ajouter" Header="Ajouter Article"  Height="50" Width="152" Click="Bouton_Ajouter_Click" IsEnabled="False"/>
-            <MenuItem Name="Bouton_Editer" Header="Editer"  Height="50" Width="152" IsEnabled="False"/>
-            <MenuItem Name="Bouton_Supprimer" Header="Supprimer" Height="50" Width="152" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False"/>
+            <MenuItem Name="Bouton_Editer" Header="Editer"  Height="50" Width="152" IsEnabled="False" Click="Bouton_Editer_Click"/>
+            <MenuItem Name="Bouton_Supprimer" Header="Supprimer" Height="50" Width="152" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False" Click="Bouton_Supprimer_Click"/>
             <TextBlock Name="Affichage_nomUser" TextWrapping="Wrap" Text="" Height="50" Width="152" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Menu>
         <ListView Name="ListeArticles" Width="157" HorizontalAlignment="Left" BorderThickness="3" SnapsToDevicePixels="True" Margin="10,55,0,40"/>

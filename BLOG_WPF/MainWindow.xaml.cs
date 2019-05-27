@@ -61,5 +61,19 @@ namespace BLOG_WPF
            Ajout_Article ajoutArt = new Ajout_Article(this);
            ajoutArt.Show();
         }
+
+        private void Bouton_Supprimer_Click(object sender, RoutedEventArgs e)
+        {
+            Collection_Article.Remove((Article)ListeArticles.SelectedItem);
+        }
+
+        private void Bouton_Editer_Click(object sender, RoutedEventArgs e)
+        {
+            Ajout_Article ajoutArt = new Ajout_Article(this);
+            ajoutArt.Champ_Titre.Text = ((Article)ListeArticles.SelectedItem).Titre;
+            ajoutArt.Champ_Article_Content.Text = ((Article)ListeArticles.SelectedItem).Contenu;
+            Collection_Article.Remove((Article)ListeArticles.SelectedItem);
+            ajoutArt.Show();
+        }
     }
 }
