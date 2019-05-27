@@ -50,7 +50,7 @@ namespace BLOG_WPF
                 this.Close();
             } else
             {
-                MessageBox.Show("Pseudo déjà pris");
+                MessageBox.Show("Pseudo déjà utilisé", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
         }
