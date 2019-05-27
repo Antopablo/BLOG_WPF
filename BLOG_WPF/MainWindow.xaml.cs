@@ -75,5 +75,11 @@ namespace BLOG_WPF
             Collection_Article.Remove((Article)ListeArticles.SelectedItem);
             ajoutArt.Show();
         }
+
+        private void ListeArticles_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Result_title.Text = ((Article)ListeArticles.SelectedItem).Titre;
+            Result_Content.Text = ((Article)ListeArticles.SelectedItem).Contenu;
+        }
     }
 }
