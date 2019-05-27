@@ -36,16 +36,21 @@ namespace BLOG_WPF
                             select u;
 
                 User usr = query.FirstOrDefault();
-                usr.Right = Right.USER;
+                if (usr.Right != Right.ADMIN)
+                {
+                    usr.Right = Right.USER;
+                }
                 ((MainWindow)System.Windows.Application.Current.MainWindow).Affichage_nomUser.Text = usr.Pseudo + " - " +usr.Right.ToString() ;
                 mw.Connected_user = usr;
+                mw.Bouton_Ajouter.IsEnabled = true;
+                mw.Bouton_Editer.IsEnabled = true;
+                mw.Bouton_Supprimer.IsEnabled = true;
                 this.Close();
             }
             catch (Exception)
             {
                 MessageBox.Show("MDP ou User invalides");
             }
-
         }
     }
 }

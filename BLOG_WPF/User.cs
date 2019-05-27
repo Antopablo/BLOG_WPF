@@ -27,6 +27,10 @@ namespace BLOG_WPF
             Pseudo = pseudo;
             Password = password;
             Right = right;
+            if (Pseudo == "ADMIN" && Password == "ADMIN")
+            {
+                Right =  Right.ADMIN;
+            }
         }
 
         [Key]
