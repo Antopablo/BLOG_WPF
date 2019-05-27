@@ -27,14 +27,11 @@ namespace BLOG_WPF
         [Column("Contenu")]
         public string Contenu { get; set; }
 
-        /*[Column("Auteur_ID")]
-        public int AuteurID { get; set; }*/
-
         public User Writer { get; set; }
 
         public override string ToString()
         {
-            return Id + " - " + Titre + " par " + Writer.Pseudo + " : " + Contenu;
+            return Titre + " par " + Writer.Pseudo;
         }
     }
 }

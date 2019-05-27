@@ -31,6 +31,7 @@ namespace BLOG_WPF
         {
             Article art = new Article(Champ_Titre.Text, Champ_Article_Content.Text, mw.Connected_user );
             mw.DB.Article.Add(art);
+            mw.Collection_Article.Add(art);
             mw.DB.SaveChanges();
             MessageBox.Show("Article enregistré " + mw.Connected_user.Pseudo);
             this.Close();

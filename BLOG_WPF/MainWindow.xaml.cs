@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,11 +35,12 @@ namespace BLOG_WPF
             set { _Connected_user = value; }
         }
 
-
+        public ObservableCollection<Article> Collection_Article = new ObservableCollection<Article>();
         public MainWindow()
         {
             InitializeComponent();
             DB = new ApplicationContext();
+            ListeArticles.ItemsSource = Collection_Article;
         }
 
         private void Bouton_SignOn_Click(object sender, RoutedEventArgs e)

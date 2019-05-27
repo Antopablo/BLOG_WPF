@@ -10,6 +10,7 @@ namespace BLOG_WPF
    public class ApplicationContext : DbContext
     {
         public DbSet <User> User { get; set; }
+
         public DbSet <Article> Article { get; set; }
     }
 }
