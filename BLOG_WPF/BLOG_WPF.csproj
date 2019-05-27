@@ -62,9 +62,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ajout_Article.xaml.cs">
+      <DependentUpon>Ajout_Article.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationContext.cs" />
     <Compile Include="Article.cs" />
-    <Compile Include="BDD.cs" />
     <Compile Include="Connexion.xaml.cs">
       <DependentUpon>Connexion.xaml</DependentUpon>
     </Compile>
@@ -89,6 +91,10 @@
       <DependentUpon>signin.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Page Include="Ajout_Article.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Connexion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

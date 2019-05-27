@@ -48,6 +48,8 @@ namespace BLOG_WPF
 
         private void Bouton_Ajouter_Click(object sender, RoutedEventArgs e)
         {
+            Ajout_Article ajoutArt = new Ajout_Article();
+            ajoutArt.Show();
         }
     }
 }
