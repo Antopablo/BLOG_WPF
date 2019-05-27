@@ -1,0 +1,25 @@
+﻿<Window  x:Class="BLOG_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLOG_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu Height="50" Width="794" Margin="0,0,-0.4,0" VerticalAlignment="Top">
+            <MenuItem Header="Espace Client" Height="50" Width="152">
+                <MenuItem Name="Bouton_Login" Header="Se Connecter"  Height="50" Width="178" Margin="0,0,-38.8,0" Click="Bouton_Login_Click"/>
+                <MenuItem Name="Bouton_SignOn" Header="S'inscrire"  Height="50" Width="171" Margin="0,0,-38.8,0" Click="Bouton_SignOn_Click"/>
+            </MenuItem>
+            <MenuItem Name="Bouton_Ajouter" Header="Ajouter Article"  Height="50" Width="152" Click="Bouton_Ajouter_Click"/>
+            <MenuItem Name="Bouton_Editer" Header="Editer"  Height="50" Width="152"/>
+            <MenuItem Name="Bouton_Supprimer" Header="Supprimer" Height="50" Width="152" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBlock Name="Affichage_nomUser" TextWrapping="Wrap" Text="" Height="50" Width="152" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Menu>
+        <ListView Name="ListeArticles" Width="157" HorizontalAlignment="Left" BorderThickness="3" SnapsToDevicePixels="True" Margin="10,55,0,40"/>
+        <Grid Name="Result" HorizontalAlignment="Left" Height="337" Margin="194,55,0,0" VerticalAlignment="Top" Width="590"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="327" Margin="191,53,0,0" Stroke="Black" VerticalAlignment="Top" Width="580"/>
+
+    </Grid>
+</Window>
