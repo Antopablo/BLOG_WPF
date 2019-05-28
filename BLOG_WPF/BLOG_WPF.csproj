@@ -70,6 +70,9 @@
     <Compile Include="Connexion.xaml.cs">
       <DependentUpon>Connexion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Editer_Article.xaml.cs">
+      <DependentUpon>Editer_Article.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201905241151549_Init.cs" />
     <Compile Include="Migrations\201905241151549_Init.Designer.cs">
       <DependentUpon>201905241151549_Init.cs</DependentUpon>
@@ -100,6 +103,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Connexion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Editer_Article.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

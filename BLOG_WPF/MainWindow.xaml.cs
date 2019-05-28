@@ -69,11 +69,11 @@ namespace BLOG_WPF
 
         private void Bouton_Editer_Click(object sender, RoutedEventArgs e)
         {
-            Ajout_Article ajoutArt = new Ajout_Article(this);
-            ajoutArt.Champ_Titre.Text = ((Article)ListeArticles.SelectedItem).Titre;
-            ajoutArt.Champ_Article_Content.Text = ((Article)ListeArticles.SelectedItem).Contenu;
+            Editer_Article Edit = new Editer_Article(this);
+            Edit.Champ_Titre_Edit.Text = ((Article)ListeArticles.SelectedItem).Titre;
+            Edit.Champ_Article_Content_Edit.Text = ((Article)ListeArticles.SelectedItem).Contenu;
             Collection_Article.Remove((Article)ListeArticles.SelectedItem);
-            ajoutArt.Show();
+            Edit.Show();
         }
 
         private void ListeArticles_MouseDoubleClick(object sender, MouseButtonEventArgs e)
