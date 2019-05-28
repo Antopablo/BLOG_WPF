@@ -36,5 +36,12 @@ namespace BLOG_WPF
             MessageBox.Show("Article enregistré par " + mw.Connected_user.Pseudo);
             this.Close();
         }
+
+        private void RAZ_Click(object sender, RoutedEventArgs e)
+        {
+            Champ_Titre.Text = "";
+            Champ_Article_Content.Text = "";
+        }
+
     }
 }

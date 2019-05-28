@@ -36,5 +36,11 @@ namespace BLOG_WPF
             MessageBox.Show("Article édité par " + mw.Connected_user.Pseudo);
             this.Close();
         }
+
+        private void RAZ_Click(object sender, RoutedEventArgs e)
+        {
+            Champ_Titre_Edit.Text = "";
+            Champ_Article_Content_Edit.Text = "";
+        }
     }
 }

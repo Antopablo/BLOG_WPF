@@ -14,7 +14,7 @@
         <TextBox x:Name="Champ_Titre_Edit" HorizontalAlignment="Left" Height="52" Margin="50,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="697" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" />
         <TextBox x:Name="Champ_Article_Content_Edit" HorizontalAlignment="Left" Height="244" Margin="50,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="697" VerticalScrollBarVisibility="Auto" AcceptsReturn="True"/>
         <Button x:Name="Valider_Article_Edit" Content="Valider" HorizontalAlignment="Left" Margin="50,327,0,0" VerticalAlignment="Top" Width="507" Height="50" RenderTransformOrigin="0.5,0.5" Click="Valider_Article_Edit_Click"/>
-        <Button x:Name="RAZ" Content="RAZ" HorizontalAlignment="Left" Margin="595,327,0,0" VerticalAlignment="Top" Width="152" Height="50"/>
+        <Button x:Name="RAZ" Content="RAZ" HorizontalAlignment="Left" Margin="595,327,0,0" VerticalAlignment="Top" Width="152" Height="50" Click="RAZ_Click"/>
 
     </Grid>
     </Window>
